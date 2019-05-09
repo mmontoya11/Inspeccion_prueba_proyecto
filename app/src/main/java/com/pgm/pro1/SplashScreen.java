@@ -19,9 +19,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.pgm.pro1.Database.GestionBD;
 import com.pgm.pro1.Tools.Connection;
 import com.pgm.pro1.Tools.MyAsyncTask;
+import io.fabric.sdk.android.Fabric;
 
 public class SplashScreen extends AppCompatActivity {
     private Connection c;
@@ -34,6 +36,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.slpash_screen);
 
 
@@ -58,7 +61,8 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SplashScreen.this, ActivityLogin.class);
-                startActivity(intent);
+
+               startActivity(intent);
             }
         });
 
@@ -182,6 +186,8 @@ public class SplashScreen extends AppCompatActivity {
             super.onPostExecute(aBoolean);
         }
     }
+
+
 
 
 }

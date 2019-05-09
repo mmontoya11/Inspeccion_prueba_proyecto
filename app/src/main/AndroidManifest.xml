@@ -48,6 +48,9 @@
         </provider>
 
         <activity android:name=".ActivityReporteError"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e6a4b0159260d4e329a0a43002c546614278bc7d" />
     </application>
 
 </manifest>

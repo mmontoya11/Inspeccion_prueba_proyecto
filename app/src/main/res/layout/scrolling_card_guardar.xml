@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:scrollbarStyle="outsideOverlay"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar foto"
+            android:padding="10dp"/>
+
+
+        <Button
+            android:padding="10dp"
+            android:id="@+id/guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:layout_below="@id/foto" />
+
+
+        <Button
+            android:padding="10dp"
+            android:id="@+id/imprimir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Imprimir"
+            android:layout_toLeftOf="@id/salir"
+            android:layout_below="@id/foto"
+            android:layout_toRightOf="@id/guardar" />
+
+        <Button
+            android:padding="10dp"
+            android:id="@+id/salir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:layout_below="@id/foto"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>

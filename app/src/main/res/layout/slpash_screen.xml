@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_gdl"
+        />
+
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:id="@+id/splash_screen_progresbar"
+        style="?android:attr/progressBarStyleHorizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_screen_Blank"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_screen_text"
+        android:text="0%"/>
+
+    <Button
+        android:id="@+id/splash_screen_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="siguiente"
+        android:visibility="invisible"
+        />
+
+</LinearLayout>

@@ -46,7 +46,6 @@ public class SplashScreen extends AppCompatActivity {
         myButton = findViewById(R.id.splash_screen_button);
 
 
-
         PedirPermisos();
 
 
@@ -104,13 +103,9 @@ public class SplashScreen extends AppCompatActivity {
         SQLiteDatabase db = gestion.getReadableDatabase();
         db.beginTransaction();
         try {
-            //Cursor c = db.rawQuery("SELECT * FROM " + tabla, null);
-            //if (c.moveToFirst()) {
-            //do {
+
             db.delete(tabla, "1", null);
-            //} while (c.moveToNext());
-            //}
-            //c.close();
+
             db.setTransactionSuccessful();
 
         } catch (SQLiteException e) {
@@ -134,10 +129,6 @@ public class SplashScreen extends AppCompatActivity {
             ActivityCompat.requestPermissions(SplashScreen.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 9999);
 
 
-
-            /*Log.e("¿Permisos?",ContextCompat.checkSelfPermission(SplashScreen.this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE)+"");*/
-
         }else{
             Toast.makeText(SplashScreen.this,ContextCompat.checkSelfPermission(SplashScreen.this,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE)+" Permisos de Escritura", Toast.LENGTH_SHORT).show();
@@ -150,10 +141,6 @@ public class SplashScreen extends AppCompatActivity {
             ActivityCompat.requestPermissions(SplashScreen.this, new String[]{Manifest.permission.INTERNET}, 1111);
 
 
-
-
-           /* Log.e("¿Permisos?",ContextCompat.checkSelfPermission(SplashScreen.this,
-                    Manifest.permission.ACCESS_NETWORK_STATE)+"");*/
         }else{
             Toast.makeText(SplashScreen.this,ContextCompat.checkSelfPermission(SplashScreen.this, Manifest.permission.INTERNET)+" Persmiso internet", Toast.LENGTH_SHORT).show();
         }
